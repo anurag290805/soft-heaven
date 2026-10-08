@@ -1,0 +1,197 @@
+.collection-page-shell {
+  min-height: 100vh;
+}
+
+.collection-page__hero {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(360px, 1.1fr);
+  align-items: center;
+  gap: clamp(3rem, 8vw, 9rem);
+  padding-top: clamp(4rem, 8vw, 7.5rem);
+  padding-bottom: clamp(4.5rem, 9vw, 8rem);
+}
+
+.collection-page__hero-copy h1,
+.collection-page__not-found h1 {
+  max-width: 650px;
+  margin-top: 1rem;
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 500;
+  letter-spacing: -.065em;
+  line-height: .98;
+}
+
+.collection-page__hero-copy > p:not(.eyebrow),
+.collection-page__not-found > p:not(.eyebrow) {
+  max-width: 410px;
+  margin-top: 1.5rem;
+  color: var(--text-secondary);
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+}
+
+.collection-page__hero-copy .button {
+  margin-top: 2rem;
+}
+
+.collection-page__hero > .storefront-image {
+  min-height: 0;
+  aspect-ratio: 4 / 5;
+}
+
+.collection-page__products {
+  padding: var(--section-space) 0;
+  background: var(--surface-raised);
+}
+
+.collection-page__products .section-heading {
+  margin-bottom: 2.75rem;
+}
+
+.collection-page__status {
+  display: flex;
+  align-items: flex-start;
+  gap: .7rem;
+  max-width: 630px;
+  margin-bottom: 2rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--accent-primary);
+  color: var(--text-secondary);
+  background: var(--surface-blush);
+  font-size: .78rem;
+  line-height: 1.65;
+}
+
+.collection-page__status svg {
+  flex: 0 0 auto;
+  margin-top: .15rem;
+  color: var(--accent-primary);
+}
+
+.collection-page__status p {
+  margin: 0;
+}
+
+.collection-page__controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .65rem .85rem;
+  margin: -1rem 0 2.3rem;
+  padding: .75rem 0;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-subtle);
+  font-size: .68rem;
+}
+
+.collection-page__controls label {
+  color: var(--accent-hover);
+  font-size: var(--type-meta);
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.collection-page__controls select {
+  min-height: 36px;
+  min-width: 150px;
+  padding: .4rem 1.8rem .4rem .55rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-control);
+  color: var(--text-primary);
+  background: var(--surface-page);
+  cursor: pointer;
+  font-size: .7rem;
+}
+
+.collection-page__controls span {
+  margin-left: auto;
+}
+
+.collection-page__empty,
+.collection-page__not-found {
+  width: min(100% - 2 * var(--gutter-page), 760px);
+  margin: 0 auto;
+  padding: clamp(3rem, 7vw, 5rem) var(--gutter-page);
+  border: 1px solid var(--border-subtle);
+  text-align: center;
+  background: var(--surface-page);
+}
+
+.collection-page__empty svg {
+  color: var(--accent-primary);
+}
+
+.collection-page__empty h3 {
+  margin-top: 1rem;
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 500;
+  letter-spacing: -.05em;
+}
+
+.collection-page__empty p {
+  max-width: 420px;
+  margin: .8rem auto 0;
+  color: var(--text-secondary);
+  font-size: .85rem;
+  line-height: 1.7;
+}
+
+.collection-page__empty .button {
+  margin-top: 1.7rem;
+}
+
+.collection-page__not-found {
+  min-height: 55vh;
+  margin-top: var(--section-space);
+  margin-bottom: var(--section-space);
+}
+
+.collection-page__not-found h1 {
+  max-width: 590px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+}
+
+.collection-page__not-found > p:not(.eyebrow) {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.collection-page__not-found .button {
+  margin-top: 1.8rem;
+}
+
+@media (max-width: 900px) {
+  .collection-page__hero {
+    display: block;
+    padding-top: 4rem;
+    padding-bottom: var(--section-space-mobile);
+  }
+
+  .collection-page__hero > .storefront-image {
+    min-height: 0;
+    margin-top: 3.5rem;
+  }
+
+  .collection-page__products {
+    padding-top: var(--section-space-mobile);
+    padding-bottom: var(--section-space-mobile);
+  }
+
+  .collection-page__controls {
+    margin-top: -.5rem;
+  }
+
+  .collection-page__controls span {
+    width: 100%;
+    margin-left: 0;
+  }
+}

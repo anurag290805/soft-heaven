@@ -1,0 +1,5 @@
+project_id = "soft-heaven"
+
+[functions.commerce]
+# The function validates customer JWTs itself; Razorpay webhooks have no JWT.
+verify_jwt = false
